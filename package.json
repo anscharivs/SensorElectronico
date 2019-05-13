@@ -1,0 +1,20 @@
+{
+    "name": "Sensorial",
+    "version": "1.0.0",
+    "description": "no se",
+    "main": "main.js",
+    "scripts": {
+        "start": "electron ."
+    },
+    "author": "yomero",
+    "license": "Ninguna",
+    "devDependencies": {
+        "electron": "^5.0.1",
+        "electron-builder": "^20.40.2",
+        "electron-rebuild": "^1.8.4",
+        "serialport": "^7.1.5"
+    },
+    "dependencies": {
+        "serialport": "^7.1.5"
+    }
+}
