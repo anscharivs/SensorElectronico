@@ -2,18 +2,30 @@
 <html>
     <head>
         <meta charset="utf-8" />
-        <title>Mostrador de Sensores</title>
+        <title></title>
         <meta name="viewport" content="width=device-width, initial-scale=1" >
-        <link rel="stylesheet" href="./style.css" >
+        <link rel="stylesheet" href="./estilo.css" >
     </head>
     <body>
-        <h1>Visor de Metadatos</h1>        
-        <hr/>
-        <pre id="data" > </pre>
-        Mi Distancia es: <pre id="Distancia" > </pre>
-        Mi LDR es: <pre id="LDR" > </pre>
-        Mi Temperatura es: <pre id="Temperatura" > </pre>
-        Mi Tilt es: <pre id="Tilt" > </pre>
+        <div class="switch">
+			<input type="checkbox" name="cbox">
+			<label for="cbox">
+			<i class="bulb">
+			  <span class="bulb-center"></span>
+			  <span class="filament-1"></span>
+			  <span class="filament-2"></span>
+			  <span class="reflections">
+				<span></span>
+			  </span>
+			  <span class="sparks">
+				<i class="spark1"></i>
+				<i class="spark2"></i>
+				<i class="spark3"></i>
+				<i class="spark4"></i>
+			  </span>
+			</i>    
+		  </label>
+		</div>
         
         <script src="./renderer.js" ></script>
     </body>

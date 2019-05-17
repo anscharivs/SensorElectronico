@@ -1,19 +1,19 @@
 'use strict'
 
-const { ipcRenderer } = require('electron')
+const { ipcRenderer, remote } = require('electron');
+const foco = document.querySelector('input[name=cbox]');
+const porto = remote.getCurrentWindow().porto;
 
-// Chingadera
+// Recibidor
 ipcRenderer.on('cerial', (event, datos) => {
-    let aro = datos.split('|')
-    try {
-        const pre = document.getElementById(aro[0])
-        pre.innerText = aro[1]
-    } catch(error) {
-        console.log(datos)
-    }    
+	foco.checked = datos == 'ENC';
 })
 
 // cachador de errores del main
 ipcRenderer.on('cerial:error', (event, error) => {
     console.error(error)
+})
+
+foco.addEventListener('change', e => {
+	porto.write(e.target.checked?  'ENC' : 'APA');
 })
