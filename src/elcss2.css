@@ -1,0 +1,110 @@
+
+h4{
+  font-family: Arial, sans-serif;
+  text-align: center;
+  text-transform: uppercase;
+  color: white;
+}
+
+h5{
+  font-family: Arial, sans-serif;
+  text-align: center;
+  color: white;
+}
+
+pre{
+  font-family: Arial, sans-serif;
+  text-align: center;
+  text-transform: uppercase;
+  color: white;
+}
+
+.general{
+  margin: auto;
+  margin-top: 60px;
+  width: 700px;
+  height: 700px;
+}
+
+.div-dist{
+  width: 350px;
+  height: 350px;
+  background-color: #282C34;
+  float: right;
+
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.div-temp{
+  width: 350px;
+  height: 350px;
+  background-color: #282C34;
+  float: right;
+
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.div-tilt{
+  width: 350px;
+  height: 350px;
+  background-color: #282C34;
+  float: right;
+
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.div-ldr {
+  width: 350px;
+  height: 350px;
+  background-color: #282C34;
+  float: right;
+
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+
+.small_buttons .button{
+  width: 80px;
+  display: block;
+  float: left;
+  border-radius:3px;
+  margin: 10px 10px 10px 10px;
+  padding:15px;
+  text-align:center;
+  text-decoration:none;
+  font: 14px "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #ecf0f1;
+  font-weight: bold;
+}
+
+.button:active{
+  position:relative;
+  top:6px;
+}
+
+.color{
+  box-shadow: 0px 6px #7f8c8d;
+  background: #95a5a6;
+}
+
+
+.cont{
+  align-items: center;
+}
+
+.dot {
+  height: 50px;
+  width: 50px;
+  background-color: #FFF9B2;
+  border-radius: 50%;
+  display: inline-block;
+  box-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #FFED00, 0 0 20px #FFED00, 0 0 50px #FFED00, 0 0 60px #FFED00, 0 0 70px #FFED00;
+}

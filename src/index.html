@@ -4,17 +4,61 @@
         <meta charset="utf-8" />
         <title>Mostrador de Sensores</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" >
-        <link rel="stylesheet" href="./style.css" >
+        <!--link rel="stylesheet" href="./style.css" -->
+		<link rel="stylesheet" href="./elcss.css" >
+    <link rel="stylesheet" href="./elcss2.css" >
     </head>
-    <body>
-        <h1>Visor de Metadatos</h1>        
-        <hr/>
-        <pre id="data" > </pre>
-        Mi Distancia es: <pre id="Distancia" > </pre>
-        Mi LDR es: <pre id="LDR" > </pre>
-        Mi Temperatura es: <pre id="Temperatura" > </pre>
-        Mi Tilt es: <pre id="Tilt" > </pre>
-        
+<body>
+  <h1>Visor de Metadatos</h1>
+  <hr>
+
+<div class="general">
+
+      <div class="div-dist">
+          <div class="dist-central">
+            <h4>Distancia registrada</h4> <pre id="Distancia" > </pre> <h5>Centímetros</h5>
+              <div class="box gauge--2">
+                  <div class="mask">
+                    <div class="semi-circle"></div>
+                    <div class="semi-circle--mask"></div>
+                  </div>
+              </div>
+          </div>
+      </div>
+
+      <div class="div-temp">
+        <div class="temp-central">
+          <h4>Temperatura del sensor</h4> <pre id="Temperatura" > </pre> <h5>Grados Celsius</h5>
+            <div class="box gauge--3">
+              <div class="mask">
+                <div class="semi-circle"></div>
+                <div class="semi-circle--mask"></div>
+              </div>
+            </div>
+        </div>
+      </div>
+
+      <div class="div-tilt">
+        <div class="tilt-central">
+          <h4>Estado del tilt</h4> <pre id="Tilt" > </pre>
+            <div class="container">
+              <div class="small_buttons">
+                <a id="textoTilt" class="button color" href="#"></a>
+              </div>
+            </div>
+        </div>
+      </div>
+
+      <div class="div-ldr">
+        <div class="ldr-central">
+          <h4>Valor de fotorresistencia</h4> <pre id="LDR" > </pre> <h5>Omhs</h5>
+          <div class="cont">
+            <span class="dot">
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
         <script src="./renderer.js" ></script>
     </body>
 </html>

@@ -4,8 +4,7 @@
     "description": "no se",
     "main": "main.js",
     "scripts": {
-        "start": "electron .",
-        "postinstall": "electron-rebuild"
+        "start": "electron ."
     },
     "author": "yomero",
     "license": "Ninguna",
