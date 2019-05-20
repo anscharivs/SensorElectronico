@@ -2,7 +2,7 @@ const { app, BrowserWindow, ipcMain } = require('electron')
 const path = require('path')
 const serialport = require('serialport');
 const Readline = require('@serialport/parser-readline')
-const portName = 'COM7';
+const portName = 'COM9';
 
 const port = new serialport(portName, {
     baudRate: 9600,

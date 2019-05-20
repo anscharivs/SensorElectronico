@@ -17,15 +17,16 @@ ipcRenderer.on('cerial', (event, datos) => {
 
         switch(aro[0]){
           case "Distancia":
+			let limo = 80;
             dst = document.querySelector(".gauge--2 .semi-circle--mask");
-            dst.style.transform = `rotate(${(180*aro[1])/(100)}deg) translate3d(0, 0, 0)`;
+            dst.style.transform = `rotate(${(180*Math.min(aro[1], limo))/(limo)}deg) translate3d(0, 0, 0)`;
           break;
           case "Temperatura":
             tmp = document.querySelector(".gauge--3 .semi-circle--mask");
             tmp.style.transform = `rotate(${(180*aro[1])/(100)}deg) translate3d(0, 0, 0)`;
           break;
           case "Tilt":
-            if(aro[1] <= 14){
+            if(aro[1] == 27){
               ti = document.querySelector(".color");
               ti.style.boxShadow = `0px 6px #27AE60`;
               ti.style.background = `#2ECC71`;
