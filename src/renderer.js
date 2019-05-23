@@ -1,6 +1,7 @@
 'use strict'
 
-const { ipcRenderer } = require('electron')
+const { ipcRenderer, remote } = require('electron');
+const porto = remote.getCurrentWindow().porto;
 
 var dst;
 var tmp;
@@ -59,4 +60,11 @@ ipcRenderer.on('cerial', (event, datos) => {
 // cachador de errores del main
 ipcRenderer.on('cerial:error', (event, error) => {
     console.error(error)
+})
+
+const slid = document.getElementById('slider');
+slid.addEventListener('change', e => {
+    let val = e.target.value;
+    let ans = '>' + val.toString().padStart(4, "0");
+	porto.write(ans);
 })
