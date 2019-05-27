@@ -8,7 +8,6 @@ var tmp;
 var ti;
 var ldr;
 
-// Chingadera
 ipcRenderer.on('cerial', (event, datos) => {
 
     let aro = datos.split('|')
@@ -17,28 +16,6 @@ ipcRenderer.on('cerial', (event, datos) => {
         pre.innerText = aro[1]
 
         switch(aro[0]){
-          case "Distancia":
-			let limo = 80;
-            dst = document.querySelector(".gauge--2 .semi-circle--mask");
-            dst.style.transform = `rotate(${(180*Math.min(aro[1], limo))/(limo)}deg) translate3d(0, 0, 0)`;
-          break;
-          case "Temperatura":
-            tmp = document.querySelector(".gauge--3 .semi-circle--mask");
-            tmp.style.transform = `rotate(${(180*aro[1])/(100)}deg) translate3d(0, 0, 0)`;
-          break;
-          case "Tilt":
-            if(aro[1] == 27){
-              ti = document.querySelector(".color");
-              ti.style.boxShadow = `0px 6px #27AE60`;
-              ti.style.background = `#2ECC71`;
-              document.getElementById("textoTilt").innerHTML = "Encendido";
-            }else{
-              ti = document.querySelector(".color");
-              ti.style.boxShadow = `0px 6px #C0392B`;
-              ti.style.background = `#E74C3C`;
-              document.getElementById("textoTilt").innerHTML = "Apagado";
-            }
-          break;
           case "LDR":
             ldr = document.querySelector(".dot");
             if(aro[1] <= 5){
@@ -64,11 +41,12 @@ ipcRenderer.on('cerial', (event, datos) => {
     }
 })
 
-// cachador de errores del main
+//Caso de error
 ipcRenderer.on('cerial:error', (event, error) => {
     console.error(error)
 })
 
+//Valor del slider
 const slid = document.getElementById('slider');
 slid.addEventListener('change', e => {
     let val = e.target.value;
